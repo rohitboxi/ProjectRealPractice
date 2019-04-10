@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>PartyLand...!</title>
+
+<style type="text/css">
+
+	body 
+	  {
+	    background-image: url("hotel1.jpg");
+        background-repeat: no-repeat;
+        background-size: 1500px 800px;
+      }
+
+    #register 
+      {
+        margin: 50px auto;
+        width: 300px;
+      } 
+ 
+    fieldset 
+      {
+        border: none;
+      }  
+ 
+    form fieldset input[type="text"], input[type="password"], input[type="email"], input[type="date"] 
+      {
+        background-color: #e5e5e5;
+        border: none;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        color: #5a5656;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        height: 20px;
+        outline: none;
+        padding: 0px 10px;
+        width: 130px;
+        -webkit-appearance:none;
+      }
+      
+    form fieldset select, dropdown
+      {
+       background-color: #e5e5e5;
+       border: none;
+       border-radius: 3px;
+       -moz-border-radius: 3px;
+       -webkit-border-radius: 3px;
+       color: #5a5656;
+       font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+       font-size: 14px;
+       height: 20px;
+       outline: none;
+       padding: 0px 10px;
+       width: 150px;
+       -webkit-appearance:none;
+      }
+      
+    form fieldset input[type="submit"] 
+      {
+        background-color: #008dde;
+        border: none;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        color: #f4f4f4;
+        cursor: pointer;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        height: 35px;
+        text-transform: uppercase;
+        width: 100px;
+        -webkit-appearance:none;
+      } 
+      
+    form fieldset a 
+      {
+        color: #5a5656;
+        font-size: 10px;
+      }
+      
+    form fieldset a:hover { text-decoration: underline; }.btn-round 
+      {
+        background-color: #5a5656;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        color: #f4f4f4;
+        display: block;
+        font-size: 12px;
+        height: 50px;
+        line-height: 50px;
+        margin: 30px 125px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 50px;
+     }
+      
+    a { text-decoration: none; }
+    h1 { font-size: 1em; padding-left: 50px; }
+    h1, p { margin-bottom: 10px;}
+    strong {font-weight: bold;}
+    .uppercase { text-transform: uppercase; }
+    
+</style>
+
+
+<!-- <script type="text/javascript">
+
+ function validate()
+  {
+	alert("inside validate function");
+	
+	var name= document.getElementById("u1").value;
+	var pwd= document.getElementById("p1").value;
+	var repwd= document.getElementById("rp1").value;
+	var email= document.getElementById("e1").value;
+	var dob= document.getElementById("d1").value;
+	var phoneNo= document.getElementById("q1").value;
+	var gender= document.getElementById("g1").value;
+	var address= document.getElementById("a1").value;
+	var pincode= document.getElementById("z1").value;
+	var country= document.getElementById("s1").value;
+	
+	alert("hello");
+	
+	alert(name);
+	alert(pwd);
+	alert(repwd);
+	alert(email);
+	alert(dob);
+	alert(phoneNo);
+	alert(gender);
+	alert(address);
+	alert(pincode);
+	alert(country);
+	
+//--------------------------username validation-------------------------------------------------------
+	if((name != null) && name.match(/^[A-Za-z0-9_]+$/))
+	{
+		alert("name is correct");
+	}
+	else
+	{
+		alert("name is not correct");
+	}
+    
+//--------------------------password validation-------------------------------------------------------
+   if((pwd != null) && pwd.match(/^[A-Za-z0-9_@#$%^&*.,!]+$/))
+	{
+		alert("pwd is correct");
+	}
+	else
+	{
+		alert("pwd is not correct");
+	}
+	
+ //--------------------------re-password validation-------------------------------------------------------
+   if((repwd != null) && repwd.match(pwd))
+	{
+		alert("re-pwd is correct");
+	}
+	else
+	{
+		alert("re-pwd is not correct?type same pwd");
+	}
+
+ //--------------------------email validation-------------------------------------------------------
+   if((email != null) && email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+	{
+		alert("email is correct");     
+	}
+	else
+	{
+		alert("email is not correct");
+	}
+ 
+ //--------------------------dob validation-------------------------------------------------------
+   if((dob != null) && dob.match(/^[0-9-]+$/))
+	{
+		alert("dob is correct");     
+	}
+	else
+	{
+		alert("dob is not correct");
+	}
+ 
+   //--------------------------phoneNo validation-------------------------------------------------------
+   if((phoneNo != null) && phoneNo.match(/^[0-9]+$/))
+	{
+		alert("phoneNo is correct");     
+	}
+	else
+	{
+		alert("phoneNo is not correct");
+	}
+   
+   //--------------------------gender validation-------------------------------------------------------
+   if((gender != null) && gender.match(/^[A-Za-z]+$/))
+	{
+		alert("gender is correct");     
+	}
+	else
+	{
+		alert("gender is not correct");
+	}
+
+   //--------------------------address validation-------------------------------------------------------
+   if((address != null) && address.match(/^[A-Za-z0-9_.()-/,]+$/))
+	{
+		alert("address is correct");     
+	}
+	else
+	{
+		alert("address is not correct");
+	}
+
+   //--------------------------pincode validation-------------------------------------------------------
+   if((pincode != null) && pincode.match(/^[0-9]+$/))
+	{
+		alert("pincode is correct");     
+	}
+	else
+	{
+		alert("pincode is not correct");
+	}
+
+   //--------------------------country validation-------------------------------------------------------
+   if(country == "Default")  
+    {  
+       alert("Select your country from the list");    
+	}
+	else
+	{
+		alert("country is "+ country);
+	}
+   
+}
+  
+</script> -->
+</head>
+<body>
+   <form action="cont" method="get" onsubmit="validate()">
+    <fieldset>
+     <h1 align="left"><strong>PARTYLAND...!</strong></h1> 
+     <table align="left"> 
+      <tr>
+      <td>UserName:</td>
+      <td><input type="text" name="username" id="u1"></td>
+      </tr>
+      <tr>
+      <td>PassWord:</td>
+      <td><input type="password" name="password" id="p1"></td>
+      </tr>
+      <tr>
+      <td>Re-PassWord:</td>
+      <td><input type="password" name="re-password" id="rp1"></td>
+      </tr>
+      <tr>
+      <td>Email:</td>
+      <td><input type="email" name="email" id="e1"></td>
+      </tr>
+      <tr>
+      <td>DateOfBirth:</td>
+      <td><input type="date" name="dob" id="d1"></td>
+      </tr>
+      <tr>
+      <td>PhoneNo:</td>
+      <td><input type="text" name="phoneno" id="q1"></td>
+      </tr>
+      <tr>
+      <td>Gender:</td>
+      <td><input type="radio" name="s1" value="male" id="g1"> Male
+          <input type="radio" name="s1" value="female" id="g1"> Female</td>
+      </tr>
+      <tr>
+      <td>Address:</td>
+      <td><textarea rows="4" cols="30" name="address" id="a1"></textarea></td>
+      </tr>
+      <tr>
+      <td>PinCode:</td>
+      <td><input type="text" name="pincode" id="z1"></td>
+      </tr>
+      <tr>
+      <td>Country:</td>
+      <td><select name="country" id="s1">
+                 <option value="Default">Select Country</option>  
+                 <option value="India">India</option>  
+                 <option value="Canada">Canada</option>  
+                 <option value="Australia">Australia</option>  
+                 <option value="Russia">Russia</option>  
+                 <option value="USA">USA</option>  
+          </select></td>
+       </tr>
+       <tr>
+       <td></td>
+       <td><input type="submit" value="Emp-Register" name="submit"></td>
+       </tr>
+      </table>
+     </fieldset>             
+   </form>
+</body>
+</html>
